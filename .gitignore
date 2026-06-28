@@ -1,3 +1,5 @@
 *
 !*.tex
 !.gitignore
+!.agents
+!*.pdf
