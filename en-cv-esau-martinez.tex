@@ -2,12 +2,12 @@
 
 % Packages:
 \usepackage[
-    ignoreheadfoot,
-    top=2 cm,
-    bottom=2 cm,
-    left=2 cm,
-    right=2 cm,
-    footskip=1.0 cm,
+  ignoreheadfoot,
+  top=2 cm,
+  bottom=2 cm,
+  left=2 cm,
+  right=2 cm,
+  footskip=1.0 cm,
 ]{geometry}
 \usepackage{titlesec}
 \usepackage{tabularx}
@@ -18,10 +18,10 @@
 \usepackage{fontawesome5}
 \usepackage{amsmath}
 \usepackage[
-    pdftitle={Esau Salvador Martinez Lopez's CV},
-    pdfauthor={Esau Salvador Martinez Lopez},
-    colorlinks=true,
-    urlcolor=primaryColor
+  pdftitle={Esau Salvador Martinez Lopez's CV},
+  pdfauthor={Esau Salvador Martinez Lopez},
+  colorlinks=true,
+  urlcolor=primaryColor
 ]{hyperref}
 \usepackage{changepage}
 \usepackage{paracol}
@@ -37,41 +37,41 @@
 \titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
 
 \newenvironment{highlights}{
-    \begin{itemize}[topsep=0.1cm,itemsep=0pt,leftmargin=0.6cm]
-}{
-    \end{itemize}
+  \begin{itemize}[topsep=0.1cm,itemsep=0pt,leftmargin=0.6cm]
+    }{
+  \end{itemize}
 }
 
 \newenvironment{onecolentry}{
-    \begin{adjustwidth}{0.2cm}{0.2cm}
-}{
-    \end{adjustwidth}
+  \begin{adjustwidth}{0.2cm}{0.2cm}
+  }{
+  \end{adjustwidth}
 }
 
 \newenvironment{twocolentry}[2][]{
-    \onecolentry
-    \def\secondColumn{#2}
-    \setcolumnwidth{\fill,4.5cm}
-    \begin{paracol}{2}
-}{
+  \onecolentry
+  \def\secondColumn{#2}
+  \setcolumnwidth{\fill,4.5cm}
+  \begin{paracol}{2}
+  }{
     \switchcolumn \raggedleft \secondColumn
-    \end{paracol}
-    \endonecolentry
+  \end{paracol}
+  \endonecolentry
 }
 
 \begin{document}
 
 \begin{center}
-    {\LARGE Esau Salvador Martinez Lopez} \\[6pt]
-    {\large \textit{AI Engineer}} \\[14pt]
-    {\small \href{mailto:contact@esau.com.mx}{contact@esau.com.mx} \quad|\quad (+52) 477 483 7416 \quad|\quad Leon, Guanajuato, Mexico \quad|\quad \href{https://linkedin.com/in/esaum}{linkedin.com/in/esaum}}
+  {\LARGE Esau Salvador Martinez Lopez} \\[6pt]
+  {\large \textit{AI Engineer}} \\[14pt]
+  {\small \href{mailto:contact@esau.com.mx}{contact@esau.com.mx} \quad | \quad (+52) 477 483 7416 \quad|\quad Leon, Guanajuato, Mexico \quad|\quad \href{https://linkedin.com/in/esaum}{linkedin.com/in/esaum}}
 \end{center}
 
 \vspace{.5em}
 
 \section{Profile Summary}
 \begin{onecolentry}
-Backend Software Engineer with 4+ years of experience designing and operating scalable backend systems, with a strong focus on applied AI solutions and LLM-powered products. Hands-on experience building semantic search systems using vector databases, orchestrating multi-LLM pipelines (OpenAI, Gemini), and developing AI-driven chat and content generation workflows. Strong background in event-driven architectures, cloud-native systems on AWS, and data-intensive platforms supporting large-scale analytics and automation.
+  Backend Software Engineer with 4+ years of experience designing and operating scalable backend systems, with a strong focus on applied AI solutions and LLM-powered products. Hands-on experience building semantic search systems using vector databases, orchestrating multi-LLM pipelines (OpenAI, Gemini), and developing AI-driven chat and content generation workflows. Strong background in event-driven architectures, cloud-native systems on AWS, and data-intensive platforms supporting large-scale analytics and automation.
 \end{onecolentry}
 
 \vspace{.5em}
@@ -79,60 +79,60 @@ Backend Software Engineer with 4+ years of experience designing and operating sc
 \section{Professional Experience}
 
 \begin{twocolentry}{\textit{Dec 2021 -- Dec 2025 | Remote}}
-\textbf{Backend Software Engineer} \\
-\textit{Justia — Legal Technology (US)}
+  \textbf{Backend Software Engineer} \\
+  \textit{Justia — Legal Technology (US)}
 \end{twocolentry}
 
 \begin{onecolentry}
-\begin{highlights}
-    \item Designed and owned backend services in TypeScript (Node.js) and AWS Lambda supporting large-scale legal automation and AI-powered workflows used by 1,000+ customers.
-    \item Built a \textbf{semantic search system} using vector embeddings and AI vector databases, enabling relevance-based document retrieval through similarity search and ranking.
-    \item Developed an \textbf{AI Writer pipeline} orchestrating multiple LLMs (OpenAI and Gemini): OpenAI generated initial drafts, Gemini evaluated and proposed improvements, and OpenAI refined the final output through iterative multi-pass generation.
-    \item Implemented an \textbf{AI-driven legal chatbot agent} that guided users through structured question creation, performed legal domain classification, and generated lawyer-friendly queries using LLM reasoning and prompt orchestration.
-    \item Designed event-driven pipelines using Redis-backed queues and AWS Step Functions to orchestrate multi-stage AI and publishing workflows with improved observability and fault tolerance.
-\end{highlights}
+  \begin{highlights}
+  \item Designed and owned backend services in TypeScript (Node.js) and AWS Lambda supporting large-scale legal automation and AI-powered workflows used by 1,000+ customers.
+  \item Built a \textbf{semantic search system} using vector embeddings and AI vector databases, enabling relevance-based document retrieval through similarity search and ranking.
+  \item Developed an \textbf{AI Writer pipeline} orchestrating multiple LLMs (OpenAI and Gemini): OpenAI generated initial drafts, Gemini evaluated and proposed improvements, and OpenAI refined the final output through iterative multi-pass generation.
+  \item Implemented an \textbf{AI-driven legal chatbot agent} that guided users through structured question creation, performed legal domain classification, and generated lawyer-friendly queries using LLM reasoning and prompt orchestration.
+  \item Designed event-driven pipelines using Redis-backed queues and AWS Step Functions to orchestrate multi-stage AI and publishing workflows with improved observability and fault tolerance.
+  \end{highlights}
 \end{onecolentry}
 
 \vspace{.5em}
 
 \begin{twocolentry}{\textit{Feb 2021 -- Jun 2021 | Grenoble, France}}
-\textbf{Research Internship} \\
-\textit{INRIA — French Institute for Research in Computer Science}
+  \textbf{Research Internship} \\
+  \textit{INRIA — French Institute for Research in Computer Science}
 \end{twocolentry}
 
 \begin{onecolentry}
-\begin{highlights}
-    \item Modeled and analyzed IoT workflows using BPMN to formally verify system behavior and execution correctness.
-    \item Identified inconsistencies, deadlocks, and invalid execution paths through formal verification techniques.
-    \item Contributed to a web-based interface that exposed verification results to non-technical users.
-\end{highlights}
+  \begin{highlights}
+  \item Modeled and analyzed IoT workflows using BPMN to formally verify system behavior and execution correctness.
+  \item Identified inconsistencies, deadlocks, and invalid execution paths through formal verification techniques.
+  \item Contributed to a web-based interface that exposed verification results to non-technical users.
+  \end{highlights}
 \end{onecolentry}
 
 \vspace{0.5em}
 \section{Technical Skills}
 
 \begin{onecolentry}
-\textbf{Programming Languages:} TypeScript, JavaScript (ES6+), Python, PHP
+  \textbf{Programming Languages:} TypeScript, JavaScript (ES6+), Python, PHP
 \end{onecolentry}
 
 % \vspace{0.1em}
 \begin{onecolentry}
-\textbf{AI \& LLMs:} OpenAI, Gemini, prompt engineering, multi-LLM orchestration, AI agents, semantic search, embeddings, vector similarity search
+  \textbf{AI \& LLMs:} OpenAI, Gemini, prompt engineering, multi-LLM orchestration, AI agents, semantic search, embeddings, vector similarity search
 \end{onecolentry}
 
 % \vspace{0.1em}
 \begin{onecolentry}
-\textbf{Backend \& Frameworks:} Node.js, Express.js, AdonisJS, Laravel
+  \textbf{Backend \& Frameworks:} Node.js, Express.js, AdonisJS, Laravel
 \end{onecolentry}
 
 % \vspace{0.1em}
 \begin{onecolentry}
-\textbf{Data Stores:} MySQL, Redis (queues, caching), Amazon Redshift (columnar analytics)
+  \textbf{Data Stores:} MySQL, Redis (queues, caching), Amazon Redshift (columnar analytics)
 \end{onecolentry}
 
 % \vspace{0.1em}
 \begin{onecolentry}
-\textbf{Cloud \& Infrastructure:} AWS (Lambda, Step Functions, EC2, S3), Docker
+  \textbf{Cloud \& Infrastructure:} AWS (Lambda, Step Functions, EC2, S3), Docker
 \end{onecolentry}
 
 \vspace{.5em}
@@ -140,21 +140,21 @@ Backend Software Engineer with 4+ years of experience designing and operating sc
 \section{Education}
 
 \begin{twocolentry}{\textit{2018 -- 2023}}
-\textbf{Universidad Tecnológica de León} \\
-\textit{B.S. in Software Engineering}
+  \textbf{Universidad Tecnológica de León} \\
+  \textit{B.S. in Software Engineering}
 \end{twocolentry}
 
 \vspace{0.1em}
 \begin{twocolentry}{\textit{2020 -- 2021}}
-\textbf{Université Grenoble Alpes} \\
-\textit{International Exchange Program — Software Engineering}
+  \textbf{Université Grenoble Alpes} \\
+  \textit{International Exchange Program — Software Engineering}
 \end{twocolentry}
 
 \vspace{.5em}
 
 \section{Languages}
 \begin{onecolentry}
-\textbf{Spanish:} Native \quad \textbf{English:} C1 \quad \textbf{French:} B2
+  \textbf{Spanish:} Native \quad \textbf{English:} C1 \quad \textbf{French:} B2
 \end{onecolentry}
 
 \end{document}
