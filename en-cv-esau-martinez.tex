@@ -1,19 +1,24 @@
 \documentclass[a4paper, 10pt]{article}
 
-% Packages:
+% Encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Packages
 \usepackage[
   ignoreheadfoot,
-  top=2 cm,
-  bottom=2 cm,
-  left=2 cm,
-  right=2 cm,
-  footskip=1.0 cm,
+  top=1.5cm,
+  bottom=1.5cm,
+  left=1.5cm,
+  right=1.5cm,
 ]{geometry}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
 \usepackage{titlesec}
 \usepackage{tabularx}
 \usepackage{array}
 \usepackage[dvipsnames]{xcolor}
-\definecolor{primaryColor}{RGB}{0, 79, 144}
+\definecolor{primaryColor}{RGB}{0, 92, 163}
 \usepackage{enumitem}
 \usepackage{fontawesome5}
 \usepackage{amsmath}
@@ -23,138 +28,96 @@
   colorlinks=true,
   urlcolor=primaryColor
 ]{hyperref}
-\usepackage{changepage}
-\usepackage{paracol}
 \usepackage{needspace}
-\usepackage{ifthen}
 
 \pagestyle{empty}
 \setcounter{secnumdepth}{0}
 \setlength{\parindent}{0pt}
 \setlength{\columnsep}{0cm}
 
-\titleformat{\section}{\needspace{4\baselineskip}\bfseries\large}{}{0pt}{}[\vspace{1pt}\titlerule]
-\titlespacing{\section}{-1pt}{0.3 cm}{0.2 cm}
+\titleformat{\section}{\needspace{3\baselineskip}\bfseries\large}{}{0pt}{}[{\color{primaryColor}\titlerule[0.6pt]}]
+\titlespacing{\section}{0pt}{0.4cm}{0.25cm}
 
 \newenvironment{highlights}{
-  \begin{itemize}[topsep=0.1cm,itemsep=0pt,leftmargin=0.6cm]
+  \begin{itemize}[topsep=0.1cm,itemsep=0.08cm,leftmargin=0.6cm,label={\small\textbullet}]
     }{
   \end{itemize}
 }
 
-\newenvironment{onecolentry}{
-  \begin{adjustwidth}{0.2cm}{0.2cm}
-  }{
-  \end{adjustwidth}
-}
-
-\newenvironment{twocolentry}[2][]{
-  \onecolentry
-  \def\secondColumn{#2}
-  \setcolumnwidth{\fill,4.5cm}
-  \begin{paracol}{2}
-  }{
-    \switchcolumn \raggedleft \secondColumn
-  \end{paracol}
-  \endonecolentry
+\newcommand{\entryheader}[2]{
+  \par\noindent\textbf{#1}\hfill#2\par
 }
 
 \begin{document}
 
 \begin{center}
-  {\LARGE Esau Salvador Martinez Lopez} \\[6pt]
-  {\large \textit{AI Engineer}} \\[14pt]
-  {\small \href{mailto:contact@esau.com.mx}{contact@esau.com.mx} \quad | \quad (+52) 477 483 7416 \quad|\quad Leon, Guanajuato, Mexico \quad|\quad \href{https://linkedin.com/in/esaum}{linkedin.com/in/esaum}}
+  {\fontsize{20}{22}\selectfont\textbf{Esau Salvador Martinez Lopez}} \\[4pt]
+  {\large AI Engineer} \\[10pt]
+  {\small
+    \href{mailto:contact@esau.com.mx}{\faEnvelope\ contact@esau.com.mx}
+    \quad\textbar\quad
+    \faPhone\ (+52) 477 483 7416
+  } \\[3pt]
+  {\small
+    \faMapMarker*\ Leon, Guanajuato, Mexico
+    \quad\textbar\quad
+    \href{https://linkedin.com/in/esaum}{\faLinkedin\ linkedin.com/in/esaum}
+    \quad\textbar\quad
+    \href{https://github.com/dinoesau}{\faGithub\ github.com/dinoesau}
+  }
 \end{center}
 
-\vspace{.5em}
+\vspace{0.3cm}
 
 \section{Profile Summary}
-\begin{onecolentry}
-  Backend Software Engineer with 4+ years of experience designing and operating scalable backend systems, with a strong focus on applied AI solutions and LLM-powered products. Hands-on experience building semantic search systems using vector databases, orchestrating multi-LLM pipelines (OpenAI, Gemini), and developing AI-driven chat and content generation workflows. Strong background in event-driven architectures, cloud-native systems on AWS, and data-intensive platforms supporting large-scale analytics and automation.
-\end{onecolentry}
-
-\vspace{.5em}
+AI Engineer with 4+ years building production AI systems for government and legal tech. Currently leading R\&D at the State Prosecutor's Office of Guanajuato, Mexico, where forensic tools I developed have been adopted by 5 jurisdictions. Previously built AI-powered workflows serving 1,000+ customers at a US legal tech company. Core expertise: GPU infrastructure, computer vision, LLM systems, and cloud-native AWS architectures.
 
 \section{Professional Experience}
 
-\begin{twocolentry}{\textit{Dec 2021 -- Dec 2025 | Remote}}
-  \textbf{Backend Software Engineer} \\
-  \textit{Justia — Legal Technology (US)}
-\end{twocolentry}
+\entryheader{AI Engineer}{May 2026 -- Present -- On-site}
+State Prosecutor's Office of Guanajuato, Mexico
 
-\begin{onecolentry}
-  \begin{highlights}
-  \item Designed and owned backend services in TypeScript (Node.js) and AWS Lambda supporting large-scale legal automation and AI-powered workflows used by 1,000+ customers.
-  \item Built a \textbf{semantic search system} using vector embeddings and AI vector databases, enabling relevance-based document retrieval through similarity search and ranking.
-  \item Developed an \textbf{AI Writer pipeline} orchestrating multiple LLMs (OpenAI and Gemini): OpenAI generated initial drafts, Gemini evaluated and proposed improvements, and OpenAI refined the final output through iterative multi-pass generation.
-  \item Implemented an \textbf{AI-driven legal chatbot agent} that guided users through structured question creation, performed legal domain classification, and generated lawyer-friendly queries using LLM reasoning and prompt orchestration.
-  \item Designed event-driven pipelines using Redis-backed queues and AWS Step Functions to orchestrate multi-stage AI and publishing workflows with improved observability and fault tolerance.
-  \end{highlights}
-\end{onecolentry}
+\begin{highlights}
+\item Lead R\&D initiatives developing AI-powered forensic tools. Manage an on-premise cluster of 8 NVIDIA H100 GPUs with vLLM for model deployment, KV-cache optimization, and performance tuning.
+\item Developed \textbf{``Rostros que no se olvidan''}, a forensic aging system using computer vision that achieves 94\% accuracy with 248+ progressions. Adopted by 4 additional state prosecutor offices.
+\item Built a \textbf{tattoo-based person search system} using image embeddings for forensic identification in SEMEFO (forensic services).
+\item Developed a \textbf{phone records analysis platform} with interactive statistics and maps for investigators.
+\end{highlights}
 
-\vspace{.5em}
+\vspace{0.2cm}
 
-\begin{twocolentry}{\textit{Feb 2021 -- Jun 2021 | Grenoble, France}}
-  \textbf{Research Internship} \\
-  \textit{INRIA — French Institute for Research in Computer Science}
-\end{twocolentry}
+\entryheader{Backend Software Engineer}{Dec 2021 -- Mar 2026 -- Remote}
+Justia --- Legal Technology (US)
 
-\begin{onecolentry}
-  \begin{highlights}
-  \item Modeled and analyzed IoT workflows using BPMN to formally verify system behavior and execution correctness.
-  \item Identified inconsistencies, deadlocks, and invalid execution paths through formal verification techniques.
-  \item Contributed to a web-based interface that exposed verification results to non-technical users.
-  \end{highlights}
-\end{onecolentry}
+\begin{highlights}
+\item Designed backend services in TypeScript (Node.js) and AWS Lambda for large-scale legal automation, serving 1,000+ customers.
+\item Built a \textbf{semantic search system} using vector embeddings and AI vector databases, enabling relevance-based document retrieval.
+\item Developed an \textbf{AI Writer pipeline} orchestrating multiple LLMs (OpenAI, Gemini) for structured content creation.
+\item Built an \textbf{AI-driven legal chatbot agent} for structured question creation and legal domain classification.
+\item Designed event-driven pipelines using Redis-backed queues and AWS Step Functions for multi-stage workflow orchestration.
+\end{highlights}
 
-\vspace{0.5em}
 \section{Technical Skills}
 
-\begin{onecolentry}
-  \textbf{Programming Languages:} TypeScript, JavaScript (ES6+), Python, PHP
-\end{onecolentry}
-
-% \vspace{0.1em}
-\begin{onecolentry}
-  \textbf{AI \& LLMs:} OpenAI, Gemini, prompt engineering, multi-LLM orchestration, AI agents, semantic search, embeddings, vector similarity search
-\end{onecolentry}
-
-% \vspace{0.1em}
-\begin{onecolentry}
-  \textbf{Backend \& Frameworks:} Node.js, Express.js, AdonisJS, Laravel
-\end{onecolentry}
-
-% \vspace{0.1em}
-\begin{onecolentry}
-  \textbf{Data Stores:} MySQL, Redis (queues, caching), Amazon Redshift (columnar analytics)
-\end{onecolentry}
-
-% \vspace{0.1em}
-\begin{onecolentry}
-  \textbf{Cloud \& Infrastructure:} AWS (Lambda, Step Functions, EC2, S3), Docker
-\end{onecolentry}
-
-\vspace{.5em}
+\textbf{AI \& LLMs:} OpenAI, Gemini, prompt engineering, multi-LLM orchestration, AI agents, machine learning, computer vision \\[2pt]
+\textbf{ML Infrastructure:} NVIDIA H100 GPU clusters, model deployment, PyTorch, HuggingFace, MLOps \\[2pt]
+\textbf{Computer Vision:} facial aging models, image embeddings, semantic similarity search, tattoo recognition, OpenCV \\[2pt]
+\textbf{Cloud \& Infrastructure:} AWS (Lambda, Step Functions, EC2, S3), Docker, CI/CD, microservices \\[2pt]
+\textbf{Backend \& Frameworks:} Node.js, Express.js, AdonisJS, Laravel, REST APIs \\[2pt]
+\textbf{Data Stores:} MySQL, Redis (queues, caching), Amazon Redshift (columnar analytics) \\[2pt]
+\textbf{Programming Languages:} TypeScript, JavaScript (ES6+), Python
 
 \section{Education}
 
-\begin{twocolentry}{\textit{2018 -- 2023}}
-  \textbf{Universidad Tecnológica de León} \\
-  \textit{B.S. in Software Engineering}
-\end{twocolentry}
+\entryheader{Universidad Tecnológica de León}{2018 -- 2023}
+B.S. in Software Engineering
 
-\vspace{0.1em}
-\begin{twocolentry}{\textit{2020 -- 2021}}
-  \textbf{Université Grenoble Alpes} \\
-  \textit{International Exchange Program — Software Engineering}
-\end{twocolentry}
+\vspace{0.15cm}
 
-\vspace{.5em}
+\entryheader{Université Grenoble Alpes}{2020 -- 2021}
+International Exchange Program --- Software Engineering
 
 \section{Languages}
-\begin{onecolentry}
-  \textbf{Spanish:} Native \quad \textbf{English:} C1 \quad \textbf{French:} B2
-\end{onecolentry}
+\textbf{Spanish:} Native \quad \textbf{English:} C1 \quad \textbf{French:} B2
 
 \end{document}
