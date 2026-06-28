@@ -2,6 +2,7 @@
 !*.tex
 !.gitignore
 !.agents
+!.agents/**
 !*.pdf
 !*.md
 !LICENSE
