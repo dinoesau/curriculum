@@ -1,0 +1,125 @@
+% !TEX program = pdflatex
+\documentclass[a4paper, 10pt]{article}
+
+% Encoding
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+
+% Packages
+\usepackage[
+  ignoreheadfoot,
+  top=1.4cm,
+  bottom=1.2cm,
+  left=1.5cm,
+  right=1.5cm,
+]{geometry}
+\usepackage{newtxtext}
+\usepackage{newtxmath}
+\usepackage{titlesec}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{primaryColor}{RGB}{0, 92, 163}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{amsmath}
+\usepackage[
+  pdftitle={CV de Esau Salvador Martinez Lopez},
+  pdfauthor={Esau Salvador Martinez Lopez},
+  colorlinks=true,
+  urlcolor=primaryColor
+]{hyperref}
+\usepackage{needspace}
+
+\pagestyle{empty}
+\setcounter{secnumdepth}{0}
+\setlength{\parindent}{0pt}
+\setlength{\columnsep}{0cm}
+
+\titleformat{\section}{\needspace{3\baselineskip}\bfseries\large}{}{0pt}{}[{\color{primaryColor}\titlerule[0.6pt]}]
+\titlespacing{\section}{0pt}{0.4cm}{0.25cm}
+
+\newenvironment{highlights}{
+  \begin{itemize}[topsep=0.1cm,itemsep=0.08cm,leftmargin=0.6cm,label={\small\textbullet}]
+    }{
+  \end{itemize}
+}
+
+\newcommand{\entryheader}[2]{
+  \par\noindent\textbf{#1}\hfill#2\par
+}
+
+\begin{document}
+
+\begin{center}
+  {\fontsize{20}{22}\selectfont\textbf{Esau Salvador Martinez Lopez}} \\[4pt]
+  {\large Ingeniero de IA} \\[10pt]
+  {\small
+    \href{mailto:contact@esau.com.mx}{\faEnvelope\ contact@esau.com.mx}
+    \quad\textbar\quad
+    \faPhone\ (+52) 477 483 7416
+  } \\[3pt]
+  {\small
+    \faMapMarker*\ Leon, Guanajuato, Mexico
+    \quad\textbar\quad
+    \href{https://linkedin.com/in/esaum}{\faLinkedin\ linkedin.com/in/esaum}
+    \quad\textbar\quad
+    \href{https://github.com/dinoesau}{\faGithub\ github.com/dinoesau}
+  }
+\end{center}
+
+\vspace{0.2cm}
+
+\section{Perfil Profesional}
+Ingeniero de IA con mas de 4 anos construyendo sistemas de IA en produccion para el sector gobierno y tecnologia legal. Actualmente lidera I+D en la Fiscalia General del Estado de Guanajuato (FGEG), donde las herramientas forenses que desarrollo estan siendo evaluadas por multiples fiscalias. Previamente desarrollo flujos de trabajo impulsados por IA que atienden a mas de 1,000 clientes en una empresa de tecnologia legal de EE.UU.
+
+\section{Experiencia Profesional}
+
+\entryheader{Ingeniero de IA}{May 2026 -- Actualidad -- Presencial}
+Fiscalia General del Estado de Guanajuato (FGEG)
+
+\begin{highlights}
+\item Lidera iniciativas de I+D desarrollando herramientas forenses impulsadas por IA. Administra un cluster on-premise de 8 GPUs NVIDIA H100 con vLLM para despliegue de modelos, optimizacion de KV-cache y ajuste de rendimiento.
+\item Dirige la estrategia tecnica del portafolio de IA forense, supervisando proyectos en curso y esfuerzos de adopcion.
+\item Co-desarrollo \textbf{``Rostros que no se olvidan''}, un sistema forense de envejecimiento facial con vision artificial que alcanza 94\% de precision con mas de 248 progresiones. En evaluacion por 4 fiscalias estatales adicionales.
+\item Co-desarrollo un \textbf{sistema de busqueda de personas por tatuajes} utilizando embeddings de imagen para identificacion forense en SEMEFO.
+\item Desarrollo una \textbf{plataforma de analisis de registros telefonicos} con estadisticas interactivas y mapas para investigadores.
+\end{highlights}
+
+\vspace{0.2cm}
+
+\entryheader{Ingeniero de Software Backend}{Dic 2021 -- Mar 2026 -- Remoto}
+Justia --- Tecnologia Legal (EE.UU.)
+
+\begin{highlights}
+\item Diseno servicios backend en TypeScript (Node.js) y AWS Lambda para automatizacion legal a gran escala, atendiendo a mas de 1,000 clientes.
+\item Construyo un \textbf{sistema de busqueda semantica} usando embeddings vectoriales y bases de datos vectoriales de IA, permitiendo recuperacion de documentos por relevancia.
+\item Desarrollo un \textbf{pipeline de redaccion con IA} usando LangChain y LangGraph, orquestando multiples LLMs (OpenAI, Gemini) para generacion estructurada de contenido.
+\item Construyo un \textbf{chatbot legal impulsado por IA} usando LangChain y LangGraph para creacion estructurada de preguntas y clasificacion de dominio legal.
+\item Diseno pipelines orientados a eventos con colas respaldadas por Redis y AWS Step Functions para orquestacion de flujos multi-etapa.
+\end{highlights}
+
+\section{Habilidades Tecnicas}
+
+\textbf{IA y LLMs:} OpenAI, Gemini, LangChain, LangGraph, ingenieria de prompts, orquestacion multi-LLM, agentes de IA, machine learning, computer vision \\[2pt]
+\textbf{Infraestructura ML:} Clusters de GPUs NVIDIA H100, despliegue de modelos, PyTorch, HuggingFace, MLOps \\[2pt]
+\textbf{Vision Artificial:} modelos de envejecimiento facial, embeddings de imagen, busqueda de similitud semantica, reconocimiento de tatuajes, OpenCV \\[2pt]
+\textbf{Nube e Infraestructura:} AWS (Lambda, Step Functions, EC2, S3), Docker, CI/CD, microservicios \\[2pt]
+\textbf{Backend y Frameworks:} Node.js, Express.js, AdonisJS, APIs REST \\[2pt]
+\textbf{Bases de Datos:} MySQL, Redis (colas, cache), Amazon Redshift (analitica columnar) \\[2pt]
+\textbf{Lenguajes de Programacion:} TypeScript, JavaScript (ES6+), Python
+
+\section{Formacion Academica}
+
+\entryheader{Universidad Tecnologica de Leon}{2018 -- 2023}
+Ingenieria en Software
+
+\vspace{0.15cm}
+
+\entryheader{Universite Grenoble Alpes}{2020 -- 2021}
+Programa de Intercambio Internacional --- Ingenieria de Software
+
+\section{Idiomas}
+\textbf{Espanol:} Nativo \quad \textbf{Ingles:} C1 \quad \textbf{Frances:} B2
+
+\end{document}
