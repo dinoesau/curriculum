@@ -8,10 +8,10 @@
 % Packages
 \usepackage[
   ignoreheadfoot,
-  top=1.4cm,
-  bottom=1.2cm,
-  left=1.5cm,
-  right=1.5cm,
+  top=1.2cm,
+  bottom=1cm,
+  left=1.4cm,
+  right=1.4cm,
 ]{geometry}
 \usepackage{newtxtext}
 \usepackage{newtxmath}
@@ -37,10 +37,10 @@
 \setlength{\columnsep}{0cm}
 
 \titleformat{\section}{\needspace{3\baselineskip}\bfseries\large}{}{0pt}{}[{\color{primaryColor}\titlerule[0.6pt]}]
-\titlespacing{\section}{0pt}{0.4cm}{0.25cm}
+\titlespacing{\section}{0pt}{0.3cm}{0.2cm}
 
 \newenvironment{highlights}{
-  \begin{itemize}[topsep=0.1cm,itemsep=0.08cm,leftmargin=0.6cm,label={\small\textbullet}]
+  \begin{itemize}[topsep=0.06cm,itemsep=0.05cm,parsep=0pt,leftmargin=0.6cm,label={\small\textbullet}]
     }{
   \end{itemize}
 }
@@ -52,13 +52,15 @@
 \begin{document}
 
 \begin{center}
-  {\fontsize{20}{22}\selectfont\textbf{Esau Salvador Martinez Lopez}} \\[4pt]
-  {\large Ingeniero de IA} \\[10pt]
+  {\fontsize{20}{22}\selectfont\textbf{Esau Salvador Martinez Lopez}} \\[2pt]
+  {\large Ingeniero de IA} \\[6pt]
   {\small
-    \href{mailto:contact@esau.com.mx}{\faEnvelope\ contact@esau.com.mx}
+    \href{mailto:esau.martinez.dev@gmail.com}{\faEnvelope\ esau.martinez.dev@gmail.com}
+    \quad\textbar\quad
+    \href{mailto:contact@esau.com.mx}{contact@esau.com.mx}
     \quad\textbar\quad
     \faPhone\ (+52) 477 483 7416
-  } \\[3pt]
+  } \\[2pt]
   {\small
     \faMapMarker*\ Leon, Guanajuato, Mexico
     \quad\textbar\quad
@@ -68,27 +70,27 @@
   }
 \end{center}
 
-\vspace{0.2cm}
+\vspace{0.1cm}
 
 \section{Perfil Profesional}
-Ingeniero de IA con mas de 4 anos construyendo sistemas de IA en produccion para el sector gobierno y tecnologia legal. Actualmente lidera I+D en la Fiscalia General del Estado de Guanajuato (FGEG), donde las herramientas forenses que desarrollo estan siendo evaluadas por multiples fiscalias. Previamente desarrollo flujos de trabajo impulsados por IA que atienden a mas de 1,000 clientes en una empresa de tecnologia legal de EE.UU.
+Ingeniero de Software con 5 anos construyendo sistemas en produccion para el sector gobierno y tecnologia legal, especializado en IA. Actualmente lidera I+D en la Fiscalia General del Estado de Guanajuato (FGEG), donde las herramientas forenses que desarrollo estan siendo evaluadas por multiples fiscalias. Previamente desarrollo flujos de trabajo impulsados por IA que atienden a mas de 1,000 clientes en una empresa de tecnologia legal de EE.UU.
 
 \section{Experiencia Profesional}
 
-\entryheader{Ingeniero de IA}{May 2026 -- Actualidad -- Presencial}
+\entryheader{Ingeniero de IA}{Mar 2026 -- Actualidad -- Presencial}
 Fiscalia General del Estado de Guanajuato (FGEG)
 
 \begin{highlights}
 \item Lidera iniciativas de I+D desarrollando herramientas forenses impulsadas por IA. Administra un cluster on-premise de 8 GPUs NVIDIA H100 con vLLM para despliegue de modelos, optimizacion de KV-cache y ajuste de rendimiento.
 \item Dirige la estrategia tecnica del portafolio de IA forense, supervisando proyectos en curso y esfuerzos de adopcion.
+\item Desarrollo un \textbf{sistema de busqueda de personas por tatuajes} utilizando embeddings de imagen para identificacion forense en SEMEFO.
 \item Co-desarrollo \textbf{``Rostros que no se olvidan''}, un sistema forense de envejecimiento facial con vision artificial que alcanza 94\% de precision con mas de 248 progresiones. En evaluacion por 4 fiscalias estatales adicionales.
-\item Co-desarrollo un \textbf{sistema de busqueda de personas por tatuajes} utilizando embeddings de imagen para identificacion forense en SEMEFO.
 \item Desarrollo una \textbf{plataforma de analisis de registros telefonicos} con estadisticas interactivas y mapas para investigadores.
 \end{highlights}
 
-\vspace{0.2cm}
+\vspace{0.12cm}
 
-\entryheader{Ingeniero de Software Backend}{Dic 2021 -- Mar 2026 -- Remoto}
+\entryheader{Ingeniero de Software Backend}{Dic 2021 -- Feb 2026 -- Remoto}
 Justia --- Tecnologia Legal (EE.UU.)
 
 \begin{highlights}
@@ -114,7 +116,7 @@ Justia --- Tecnologia Legal (EE.UU.)
 \entryheader{Universidad Tecnologica de Leon}{2018 -- 2023}
 Ingenieria en Software
 
-\vspace{0.15cm}
+\vspace{0.1cm}
 
 \entryheader{Universite Grenoble Alpes}{2020 -- 2021}
 Programa de Intercambio Internacional --- Ingenieria de Software
